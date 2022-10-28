@@ -134,7 +134,7 @@ class NewOrderHandler:
             '''
             SELECT * 
             FROM CS5424sample.sample_customer 
-            WHERE c_id = {};'''.format(self.c_id)).one()
+            WHERE c_w_id = {} AND c_d_id = {} AND c_id = {};'''.format(self.w_id, self.d_id, self.c_id)).one()
         c_discount = round(customer_row.c_discount, 4)
 
         total_amount = total_amount * (1 + d_tax + w_tax) * (1 - c_discount)
