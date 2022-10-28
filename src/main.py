@@ -1,4 +1,4 @@
-from transactions import new_order
+from transactions import new_order,payment
 from cassandra.cluster import Cluster
 
 
@@ -19,10 +19,11 @@ def main():
             new_order_handler.run(lines[i+1: i+int(args[-1])+1])
             i += int(args[-1]) + 1
             continue
-        elif command == 'I':
+        elif command == 'P':
+            payment_handler = payment.PaymentHandler(session, *args[1:])
+            payment_handler.run()
             i += 1
-        elif command == 'D':
-            i += 1
+            continue
 
 
 if __name__ == "__main__":
