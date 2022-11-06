@@ -3,9 +3,7 @@
 ## YCQL
 
 ### Python package
-```
-pip install pandas
-```
+pandas, cassandra-driver, numpy
 ### Configure
 Our goal is to Create a 5-node cluster with replication factor of 3 in our 5 allocated servers: xcnd45-xcnd49.
 1. Install the yugabyteDB in 5 servers under /temp/cs4224/ directory. Follow the link in https://docs.yugabyte.com/preview/quick-start/linux/
