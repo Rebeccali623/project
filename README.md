@@ -54,6 +54,8 @@ Our goal is to Create a 5-node cluster with replication factor of 3 in our 5 all
 --master_addresses 192.168.51.8:7101,192.168.51.9:7101,192.168.51.10:7101 \
 list_all_masters ` to check the status and use `./bin/ycqlsh 192.168.51.10 9043` to connect to ycql client.
 
+    tserver.conf and master.conf files are attached in zip file, they could be put under /temp/cs4224v/.
+
 ### Data
 1. Copy project_files.zip to each server
     ```
@@ -64,6 +66,7 @@ list_all_masters ` to check the status and use `./bin/ycqlsh 192.168.51.10 9043`
     Where XX is 45-49
 
 2. Preprocess
+    Or put cs4224v_project folder under /home/stuproj/cs4224v/.
     
     Create folder at /temp/cs4224v/processed_data
     ```
